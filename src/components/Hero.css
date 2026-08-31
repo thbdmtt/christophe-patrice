@@ -1,0 +1,63 @@
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  border-bottom:1px solid var(--ligne-sombre);
+}
+.hero .hero-photo{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;
+  animation:heroin 20s ease-in-out infinite alternate;
+}
+@media (prefers-reduced-motion:reduce){ .hero .hero-photo{animation:none;} }
+@keyframes heroin{ from{ transform:scale(1.0); } to{ transform:scale(1.045); } }
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--fond-sombre) 52%, transparent) 0%, transparent 22%),
+    linear-gradient(180deg, color-mix(in srgb, var(--fond-sombre) 12%, transparent) 0%, color-mix(in srgb, var(--fond-sombre) 60%, transparent) 66%, var(--fond-sombre) 100%),
+    linear-gradient(90deg, color-mix(in srgb, var(--fond-sombre) 32%, transparent) 0%, transparent 45%);
+  pointer-events:none;
+}
+.hero-credit{
+  position:absolute;left:40px;top:94px;z-index:2;
+  font-size:.68rem;letter-spacing:.04em;color:var(--texte-sombre);
+  background:color-mix(in srgb, var(--fond-sombre) 55%, transparent);
+  padding:5px 10px;
+  opacity:0;transform:translateY(5px);
+  transition:opacity .18s ease,transform .18s ease;
+}
+.hero:hover .hero-credit,
+.hero:focus-within .hero-credit{opacity:1;transform:translateY(0);}
+@media (max-width:720px){.hero-credit{left:22px;top:82px;opacity:1;transform:none;}}
+.hero-content{position:relative;z-index:2;padding:0 40px 64px;width:100%;}
+@media (max-width:720px){.hero-content{padding:0 22px 46px;}}
+.hero h1{
+  font-size:clamp(2.4rem,6vw,4.6rem);
+  max-width:14ch;
+  margin-top:18px;
+  color:var(--texte-sombre);
+}
+.hero .sub{
+  max-width:52ch;margin-top:22px;color:var(--texte-sombre);font-size:1.02rem;
+  padding-left:16px;border-left:2px solid var(--vert-sombre);
+}
+.hero .cta-row{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap;}
+.hero .eyebrow{
+  color:var(--texte-sombre);
+  width:fit-content;
+  background:color-mix(in srgb, var(--fond-sombre) 42%, transparent);
+  padding:5px 12px 5px 4px;
+}
+.hero .eyebrow::before{background:var(--vert-sombre);}
+.scroll-cue{
+  position:absolute;right:40px;bottom:28px;z-index:2;
+  display:flex;align-items:center;gap:10px;
+  font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--texte-sombre-muted);
+  writing-mode:vertical-rl;
+}
+.scroll-cue::after{content:"";display:block;width:1px;height:44px;background:var(--texte-sombre-muted);}
+@media (max-width:720px){.scroll-cue{display:none;}}
+@media (prefers-reduced-motion:reduce){.hero-credit{transition:none;}}

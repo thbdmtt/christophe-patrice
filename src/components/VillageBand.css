@@ -1,0 +1,11 @@
+.village-band{position:relative;height:44vh;min-height:280px;overflow:hidden;margin:0;}
+.village-band img{width:100%;height:100%;object-fit:cover;display:block;}
+.village-band::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(0deg, color-mix(in srgb, var(--fond-sombre) 55%, transparent) 0%, transparent 55%);
+}
+.village-band .vb-caption{
+  position:absolute;left:40px;bottom:22px;z-index:2;color:var(--texte-sombre);
+  font-size:.82rem;letter-spacing:.02em;
+}
+@media (max-width:720px){.village-band .vb-caption{left:22px;}}

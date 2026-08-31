@@ -1,0 +1,42 @@
+.vins-header{
+  margin:0 0 20px;
+  border:1px solid var(--ligne-claire);
+  background:var(--panneau);
+}
+.vins-header img{width:100%;height:360px;object-fit:cover;display:block;}
+.vins-header.hover-caption > .hover-caption-text{
+  max-width:72ch;padding:64px 34px 22px;font-size:.82rem;
+}
+@media (max-width:820px){
+  .vins-header img{height:280px;}
+  .vins-header.hover-caption > .hover-caption-text{padding:52px 20px 16px;}
+}
+
+.collection{border-top:1px solid var(--ligne-claire);}
+.wine-row{
+  display:grid;grid-template-columns:1.1fr 1.4fr .9fr;gap:30px;
+  padding:32px 0;border-bottom:1px solid var(--ligne-claire);
+  align-items:start;
+}
+@media (max-width:880px){.wine-row{grid-template-columns:1fr;gap:14px;}}
+.wine-row .name{font-size:1.5rem;font-family:'Fraunces',serif;font-weight:600;color:var(--texte-clair);}
+.wine-row .meta{font-size:.8rem;color:var(--texte-clair-muted);margin-top:8px;letter-spacing:.02em;}
+.wine-row .note{font-size:.92rem;margin-top:4px;}
+.wine-row .archive{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;}
+.archive-label{
+  flex-basis:100%;margin-bottom:2px;
+  color:var(--texte-clair-muted);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;
+}
+.chip{
+  font-size:.68rem;padding:3px 9px;border:1px solid var(--ligne-claire);color:var(--texte-clair-muted);
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+.chip.or{border-color:var(--vert-clair);color:var(--vert-clair);}
+.wine-row .side{text-align:left;}
+.wine-row .avail{font-size:.82rem;margin-bottom:14px;}
+.wine-row .avail b{display:block;font-family:'Archivo',sans-serif;color:var(--texte-clair);font-weight:600;font-size:.86rem;}
+.fiche-link{
+  font-size:.82rem;text-decoration:none;color:var(--texte-clair);
+  border-bottom:1px solid var(--texte-clair);padding-bottom:2px;display:inline-block;
+}
+.wine-row .side .fiche-link{margin:0 12px 10px 0;}

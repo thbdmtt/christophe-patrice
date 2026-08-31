@@ -1,0 +1,23 @@
+/*
+  Palette centralisée, à rôle fixe plutôt qu'à thème commutable :
+  trois fonds sombres (header, hero, footer, professionnel) encadrent
+  un contenu éditorial clair (Domaine, Terroir, Vins, Visiter). Chaque
+  couleur de texte / bordure / accent existe en déclinaison claire et
+  sombre ; on choisit la bonne selon le fond du bloc, jamais l'inverse.
+*/
+:root {
+  --fond-sombre: #171a15;
+  --fond-clair: #f2efe6;
+  --panneau: #faf8f2;
+  --fond-secondaire: #e7e2d6;
+
+  --texte-clair: #20231e;
+  --texte-clair-muted: #5a5e55;
+  --ligne-claire: #cec8ba;
+  --vert-clair: #2f7057;
+
+  --texte-sombre: #f1ede2;
+  --texte-sombre-muted: #b8b3a6;
+  --ligne-sombre: #383c32;
+  --vert-sombre: #58a07d;
+}

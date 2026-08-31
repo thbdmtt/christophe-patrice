@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Christophe Patrice">
+  <rect width="64" height="64" rx="12" fill="#171a15"/>
+  <circle cx="48" cy="16" r="5" fill="#58a07d"/>
+  <text x="9" y="43" fill="#f1ede2" font-family="Georgia, serif" font-size="31" font-weight="700">CP</text>
+</svg>

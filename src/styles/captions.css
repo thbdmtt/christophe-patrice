@@ -1,0 +1,37 @@
+.hover-caption{
+  position:relative;
+  overflow:hidden;
+}
+.hover-caption > .hover-caption-text{
+  position:absolute;left:0;right:0;bottom:0;z-index:3;
+  margin:0;padding:32px 14px 12px;
+  border:0;
+  color:var(--texte-sombre);
+  background:linear-gradient(
+    0deg,
+    color-mix(in srgb, var(--fond-sombre) 82%, transparent) 0%,
+    color-mix(in srgb, var(--fond-sombre) 42%, transparent) 58%,
+    transparent 100%
+  );
+  font-size:.74rem;line-height:1.35;
+  opacity:0;transform:translateY(7px);
+  pointer-events:none;
+  transition:opacity .18s ease,transform .18s ease;
+}
+.hover-caption:hover > .hover-caption-text,
+.hover-caption:focus-within > .hover-caption-text{
+  opacity:1;transform:translateY(0);
+}
+.hover-caption:focus-visible{
+  outline:2px solid var(--vert-clair);
+  outline-offset:3px;
+}
+.village-band.hover-caption > .hover-caption-text{padding-left:40px;}
+
+@media (max-width:720px), (hover:none){
+  .hover-caption > .hover-caption-text{opacity:1;transform:none;}
+  .village-band.hover-caption > .hover-caption-text{padding-left:22px;}
+}
+@media (prefers-reduced-motion:reduce){
+  .hover-caption > .hover-caption-text{transition:none;}
+}
