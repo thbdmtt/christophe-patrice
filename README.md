@@ -6,8 +6,16 @@ footer.
 
 ## Site publié
 
-Le site est déployé automatiquement sur GitHub Pages à chaque mise à jour de la branche `main` :
-[thbdmtt.github.io/christophe-patrice](https://thbdmtt.github.io/christophe-patrice/).
+Aperçu protégé par mot de passe sur Cloudflare Pages :
+[christophe-patrice.pages.dev](https://christophe-patrice.pages.dev/).
+
+Le mot de passe est un secret Cloudflare (`SITE_PASSWORD`), hors dépôt. GitHub Pages n’est plus l’hôte public.
+
+Pour republier depuis ce dossier, une fois le site compilé :
+
+```bash
+npx wrangler pages deploy ./dist --project-name christophe-patrice
+```
 
 ## Lancer en développement
 
@@ -36,3 +44,7 @@ npm run preview
 - `src/data/wines.js` — cuvées, médailles, disponibilité, positions de la carte de terroir
 - `src/styles/` — `variables.css` (palette), `fonts.css`, `base.css`
 - `src/assets/` — polices (Fraunces, Archivo) et photographies du domaine
+
+## Méthode et outils de prospection
+
+L’activité commune aux domaines viticoles est regroupée dans [Atelier viticole](<../Atelier viticole/README.md>), un dossier indépendant de ce site. Les chemins `project-management/` et `reference-sites/` sont conservés comme liens symboliques de compatibilité vers cet espace. Pour travailler sur la prospection et ses outils, ouvrir directement `Projects/Atelier viticole`.
